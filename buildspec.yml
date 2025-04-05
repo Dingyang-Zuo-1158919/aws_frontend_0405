@@ -9,6 +9,8 @@ phases:
       - echo no commands executed before building commands...
   build:
     commands:
+      - export NODE_OPTIONS=--openssl-legacy-provider
+      - rm -rf node_modules
       - npm install
       - echo npm install completed on `date`
       - npm run build
